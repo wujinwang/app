@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: dashboard-container
-        image: wujw2013/dashboard-app:v1
+        image: wujw2013/dashboard-app:v2
         ports:
         - containerPort: 3000
         resources:
