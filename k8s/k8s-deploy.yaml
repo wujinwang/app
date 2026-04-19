@@ -31,7 +31,8 @@ spec:
               name: db-secrets
               key: url
         - name: NODE_ENV
-          value: "production"	
+          value: "production"
+---
 apiVersion: v1
 kind: Service
 metadata:
