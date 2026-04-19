@@ -17,7 +17,21 @@ spec:
         image: wujw2013/dashboard-app:v1
         ports:
         - containerPort: 3000
----
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: db-secrets
+              key: url
+        - name: NODE_ENV
+          value: "production"	
 apiVersion: v1
 kind: Service
 metadata:
